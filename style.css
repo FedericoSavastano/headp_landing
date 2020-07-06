@@ -22,10 +22,6 @@ nav {
   justify-content: space-between;
   padding: 0 10px 0 10px;
   background-color: rgb(209, 184, 233);
-
-  /* position: fixed;
-                          width: 100%;
-                          height: fit-content; */
 }
 nav a {
   text-shadow: 2px 3px 4px whitesmoke;
@@ -44,10 +40,6 @@ nav a {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
 }
-
-/* .tab-content {
-                          margin-top: 20px;
-                        } */
 
 .col2 {
   border: 4px double rgb(247, 142, 200);
@@ -142,10 +134,12 @@ nav a {
   min-height: 100vh;
   background: purple;
 }
-
+#card2 {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
 .containerProd {
   position: relative;
-  padding-left: 30px;
 }
 
 .containerProd .card {
@@ -362,26 +356,33 @@ nav a {
 
 /* // Extra small devices (portrait phones, less than 576px)*/
 @media only screen and (max-width: 576px) {
-  body {
-    display: grid;
-    grid-template-columns: 1fr;
-    width: fit-content;
+  #all {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
-
   #products {
-    /* display: none;*/
-    display: grid;
-    grid-template-columns: 1fr !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  section {
+    width: 100%;
+    height: auto;
   }
 
-  .containerProd {
-    position: relative;
-    align-content: center;
-    text-align: center !important;
-    width: 100% !important;
+  #banner {
+    height: 100%;
+    padding-top: 70px;
   }
-  .card {
-    display: inline-block !important;
+
+  #banner h1 {
+    font-size: 5rem;
+  }
+
+  #banner h4 {
+    font-size: 1.1rem;
+    margin-top: 150px;
   }
 
   .col1,
@@ -393,32 +394,21 @@ nav a {
     display: grid;
     grid-template-columns: 1fr;
   }
-  /*
-              #products {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                justify-content: center;
-                    align-items: center; */
-  /* min-height: 100vh;
-                background: purple;
-              } */
-}
 
-/* // Small devices (landscape phones, less than 768px)
-      @media (max-width: 767.98px) {
-      } */
+  nav {
+    font-size: 10px;
+  }
 
-/* // Medium devices (tablets, less than 992px) */
-@media (max-width: 991.98px) {
-  #products {
-    /* display: none;*/
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+  #homemenu h3 {
+    font-size: 12px;
+  }
+
+  .containerProd .card {
+    position: relative;
+    width: 260px;
+    height: 450px;
+    background: grey;
+    border-radius: 20px;
+    overflow: hidden;
   }
 }
-
-/* // Large devices (desktops, less than 1200px)
-      @media (max-width: 1199.98px) {
-      }*/
